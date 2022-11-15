@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    width: 400px;
+    background: #585f6e;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 5px 5px 30px 10px rgba(0, 0, 0, 0.1);
+}
+
+.calc-input {
+    width: 100%;
+    border: none;
+    font-size: 35px;
+    text-align: right;
+    padding: 10px;
+    background: #585f6e;
+    color: #0077ff;
+}
+
+#ope-input {
+    font-size: 20px;
+    color: white;
+}
+
+.calc-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 15px;
+}
+
+.equal {
+    grid-column: span 2;
+    border-radius: 50px;
+}
+
+button {
+    padding: 20px;
+    font-size: 24px;
+    border: none;
+    border-radius: 45%;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ccddce;
+}
+
+.operation {
+    background: #0077ff;
+    color: white;
+}
+
+.operation:hover {
+    background: #026be2;
+}
+
+.history-page {
+    position: absolute;
+    width: 380px;
+    height: 442px;
+    background-color: #0077ff;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 25px;
+    overflow-y: auto;
+    display: none;
+}
+
+.history-page.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.history-icon {
+    color: white;
+    font-size: 1.8em;
+    position: relative;
+    left: 2%;
+    top: 2%;
+    cursor: pointer;
+}
+
+.history-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.history-element {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.history-element:hover {
+    background: #026be2;
+}
+
+.history-element .calc-his {
+    width: 100%;
+    background: transparent;
+    color: white;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    text-align: right;
+}
